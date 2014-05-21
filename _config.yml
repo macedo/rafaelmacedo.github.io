@@ -3,7 +3,7 @@ highlighter: pygments
 url: http://blog.rafaelmacedo.com
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore]
-
+markdown: kramdown
 theme:
   highlight_color: "#27292C"
 
