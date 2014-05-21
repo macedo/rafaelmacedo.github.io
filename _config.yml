@@ -1,0 +1,18 @@
+# General Jekyll Config
+highlighter: pygments
+url: http://blog.rafaelmacedo.com
+lsi: false
+exclude: [LICENSE, CNAME, README.md, .gitignore]
+
+theme:
+  highlight_color: "#27292C"
+
+  social:
+    github: rafaelmacedo
+    twitter: macedorafael
+    linkedin: macedorafael
+
+  name: Rafael Macedo
+  email: macedo.rafaelfernandes@gmail.com
+
+  google_analytics_key: UA-xxxx-x
