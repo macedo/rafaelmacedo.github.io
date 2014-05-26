@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>The blog of Rafael Macedo</title>
+ <link href="http://blog.rafaelmacedo.com/atom.xml" rel="self"/>
+ <link href="http://blog.rafaelmacedo.com"/>
+ <updated>2014-05-25T21:19:15-03:00</updated>
+ <id>http://blog.rafaelmacedo.com</id>
+ <author>
+   <name>Rafael Macedo</name>
+   <email>macedo.rafaelfernandes@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Hello World</title>
+   <link href="http://blog.rafaelmacedo.com/2014/03/26/hello_world.html"/>
+   <updated>2014-03-26T00:00:00-03:00</updated>
+   <id>http://blog.rafaelmacedo.com/2014/03/26/hello_world</id>
+   <content type="html">&lt;p&gt;Hello World!!! Depois de muito tempo enrolando resolvi começar escrever algumas coisas por aqui. Pretendo manter uma certa frequência nas postagens. Vamos ver por quanto tempo isso dura.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>
