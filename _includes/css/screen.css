@@ -131,17 +131,6 @@ nav hr {
   margin-left: 1.35em;
 }
 
-#post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  font-size: 85%;
-  padding: 0 .2em;
-}
-
-#post pre code {
-  border: none;
-}
-
 .sidebar {
   padding-top: 25px;
   font-family: "open sans", sans-serif;
