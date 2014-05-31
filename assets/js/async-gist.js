@@ -11341,7 +11341,6 @@ require(["jquery"], function ($) {
             }
 
             isCssReady(function() {
-                console.log("aqui");
                 $dataGist.html("")
                          .append(response.div);
             });
