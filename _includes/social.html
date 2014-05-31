@@ -1,24 +1,22 @@
 Follow me:
-<div id="stalker">
+<ul id="stalker">
   {% if site.theme.social.github %}
-  <a title="{{ site.theme.social.github }} on Github" href="https://github.com/{{ site.theme.social.github }}">
-    <i class="fa fa-github-square"></i>
-  </a>
+  <li><a title="{{ site.theme.social.github }} on Github" href="https://github.com/{{ site.theme.social.github }}">
+    github.com/{{ site.theme.social.github }}
+  </a></li>
   {% endif %}
 
   {% if site.theme.social.twitter %}
-  <a title="{{ site.theme.social.twitter }} on Twitter" href="https://twitter.com/{{ site.theme.social.twitter }}">
-    <i class="fa fa-twitter-square"></i>
-  </a>
+  <li><a title="{{ site.theme.social.twitter }} on Twitter" href="https://twitter.com/{{ site.theme.social.twitter }}">
+    twitter.com/{{ site.theme.social.twitter }}
+  </a></li>
   {% endif %}
 
   {% if site.theme.social.linkedin %}
-  <a title="{{ site.theme.name }} on LinkedIn" href="https://www.linkedin.com/in/{{ site.theme.social.linkedin }}">
-    <i class="fa fa-linkedin-square"></i>
-  </a>
+  <li><a title="{{ site.theme.name }} on LinkedIn" href="https://www.linkedin.com/in/{{ site.theme.social.linkedin }}">
+    linkedin.com/in/{{ site.theme.social.linkedin }}
+  </a></li>
   {% endif %}
 
-  <a title="RSS feed" id="rss" href="/atom.xml">
-    <i class="fa fa-rss-square"></i>
-  </a>
-</div>
+  <li><a title="RSS feed" id="rss" href="/atom.xml">RSS feed</a></li>
+</ul>
