@@ -6,10 +6,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rafael Macedo - Como remover um arquivo do git sem deletar localmente</title>
+  <title>Rafael Macedo - Instalando nodejs + npm com um usuário sem privilégio de root</title>
   <meta name="author" content="Rafael Macedo" />
   <meta name="description" content="The blog of Rafael Macedo" />
-  <link rel="canonical" href="http://blog.rafaelmacedo.com/2014/05/27/como-remover-um-arquivo-do-git-sem-deletar-localmente.html" />
+  <link rel="canonical" href="http://blog.rafaelmacedo.com/2014/06/26/node-npm-instalacao-local.html" />
 
   <link rel="shortcut icon" href="/favicon.png">
   <link rel="alternate" type="application/rss+xml" title="Rafael Macedo" href="http://blog.rafaelmacedo.com/atom.xml" />
@@ -55,23 +55,50 @@
 
     <div class="eleven columns content">
       <p class="meta">
-  27 de Mai 2014
+  26 de Jun 2014
   <a href="/">
     <i class="home fa fa-home"></i>
   </a>
 </p>
 
-<h1 class="title">Como remover um arquivo do git sem deletar localmente</h1>
+<h1 class="title">Instalando nodejs + npm com um usuário sem privilégio de root</h1>
 
 <div id="post">
-  <p>O comando <code>git rm</code> nos permite remover arquivos ou pastas do nosso controle de versão e localmente. Entretanto, as vezes precisamos de remover o arquivo apenas do controle de versão. Alguns exemplos comuns são arquivos de configuraçã e gerados por IDE’s.</p>
+  <p>Ultimamente tenho desenvolvido bastante em nodejs seja para aprendizado ou projetos pessoais. Uma coisa que
+sempre me encomodou foi o fato do <a href="http://npmjs.org">npm</a> (Node Package Manager) precisar de privilégios root (sudo).</p>
 
-<p>Adicionando a opção <code>--cached</code> permite remover o arquivo apenas do controle de versão mantendo-o localmente em disco.</p>
+<p>Felizmente isso pode ser contornado instalando o nodejs + npm com um usuário normal seguindo alguns simples passos descritos a seguir <a href="#note-1">[1]</a>.</p>
 
-<pre><code>git rm --cached file
+<p>1.Adicione ao <code>~/.npmrc</code> as seguintes linhas</p>
+
+<pre><code>root    = "$HOME/.local/lib/node_modules"
+binroot = "$HOME/.local/bin"
+manroot = "$HOME/.local/share/man"
 </code></pre>
 
-<p>Após rodar o comando acima, adicione o arquivo ao <code>gitignore</code>. Assim o arquivo especificado não será listado no git status evitando ser adicionado acidentalmente.</p>
+<p>2.Download e instalação do nodejs</p>
+
+<pre><code>cd /tmp
+wget http://nodejs.org/dist/v0.10.29/node-v0.10.29.tar.gz
+tar -xpf node-v0.10.29.tar.gz &amp;&amp; cd node-v0.10.29
+./configure --prefix=~/.local &amp;&amp; make &amp;&amp; make install
+</code></pre>
+
+<p>3.Agora vamos criar um link simbólico para o <code>~/.node_modules</code>.</p>
+
+<pre><code>cd ..
+ln -s .local/lib/node_modules .node_modules
+</code></pre>
+
+<p>4.E por ultimo adicione <code>~/.local/bi</code>n ao $PATH</p>
+
+<pre><code>echo "export PATH=$HOME/.local/bin:$PATH" &gt;&gt; $HOME/.bashrc
+source $HOME/.bashrc
+</code></pre>
+
+<p>Com isso, ao instalar um pacote npm com a flag global ele será instalado localmente (~/.local) não necessitando de privilégios root mais.</p>
+
+<p><em class="notes" id="note-1">[1] Os passos descritos vão instalar o Nodejs e npm em <code>~/.local</code>. Por padrão ele seria instalado em <code>/usr/local</code></em></p>
 
 </div>
 
