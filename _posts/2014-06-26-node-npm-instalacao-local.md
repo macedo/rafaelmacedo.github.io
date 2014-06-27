@@ -24,7 +24,7 @@ Felizmente isso pode ser contornado instalando o nodejs + npm com um usuário no
 
 3.Agora vamos criar um link simbólico para o `~/.node_modules`.
 
-    cd ..
+    cd
     ln -s .local/lib/node_modules .node_modules
 
 4.E por ultimo adicione `~/.local/bi`n ao $PATH
