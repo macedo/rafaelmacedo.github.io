@@ -7,6 +7,6 @@ O comando `git rm` nos permite remover arquivos ou pastas do nosso controle de v
 
 Adicionando a opção `--cached` permite remover o arquivo apenas do controle de versão mantendo-o localmente em disco.
 
-<code data-gist-id="2178bd8ffd172084968b"></code>
+    git rm --cached file
 
 Após rodar o comando acima, adicione o arquivo ao `gitignore`. Assim o arquivo especificado não será listado no git status evitando ser adicionado acidentalmente.

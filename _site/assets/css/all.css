@@ -332,10 +332,6 @@
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
-.gist {
-  color: #fff;
-}
-
 /*
 * Skeleton V1.1
 * Copyright 2011, Dave Gamache
@@ -622,8 +618,13 @@ ul {
   list-style: disc;
 }
 
+em.notes {
+  font-size: 12px;
+}
+
 a {
   color: #27292C;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -696,7 +697,6 @@ nav hr {
 
 #post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .4em;
   margin-bottom: 20px !important;
 }
